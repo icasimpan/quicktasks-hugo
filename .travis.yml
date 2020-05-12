@@ -8,7 +8,7 @@ env:
   - REPO="quicktasks-hugo"
   - BUILD_DIR="public"
   - GH_REPO="github.com/${USER}/${REPO}.git"
-  - GH_MERGE_REPO="github.com/it-quicktasks/it-quicktasks.io"
+  - GH_MERGE_REPO="github.com/it-quicktasks/it-quicktasks.github.io"
   - HUGO_INSTALLER_URL="https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_0.70.0_Linux-64bit.deb"
   - GH_PUBLISH_BRANCH='gh-pages'
 
@@ -25,6 +25,7 @@ after_success:
   - git commit -m "${MESSAGE}"
   - git checkout -b ${GH_PUBLISH_BRANCH}
   - git push "https://${GITHUB_TOKEN}@${GH_REPO}" ${GH_PUBLISH_BRANCH} -f
+  - ls -l content/posts/
   ## Try and merge to it-quicktasks.com
   - git clone https://${GH_MERGE_REPO}
   - mv ~/content/posts/*.md it-quicktasks.io/content/posts
