@@ -1,6 +1,7 @@
 ---
 title: "Hugo Static Files"
 date: 2019-09-30T23:17:11+08:00
+tags: [hugo]
 draft: false
 ---
 

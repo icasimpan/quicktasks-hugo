@@ -8,12 +8,11 @@ env:
   - REPO="quicktasks-hugo"
   - BUILD_DIR="public"
   - GH_REPO="github.com/${USER}/${REPO}.git"
-  - HUGO_INSTALLER_URL="https://github.com/gohugoio/hugo/releases/download/v0.49.2/hugo_0.49.2_Linux-64bit.deb"
+  - HUGO_INSTALLER_URL="https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_0.70.0_Linux-64bit.deb"
   - GH_PUBLISH_BRANCH='gh-pages'
 
 ## Force commit to 'gh-pages' the built hugo site
 after_success:
-  - if [ -z $GITHUB_TOKEN ]; then echo "GITHUB_TOKEN var undefined, aborting."; exit 1; fi
   - MESSAGE='Auto-built and commit via Travis CI.'
   - ls -l
   - mv ${BUILD_DIR} ~/ || exit 1

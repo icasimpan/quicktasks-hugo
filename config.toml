@@ -1,9 +1,0 @@
-baseURL = "https://ismael.casimpan.com/quicktasks-hugo"
-languageCode = "en-us"
-title = "Quick Tasks: Hugo"
-theme = "basics"
-
-[params]
-    author = "Ismael Casimpan"
-    github = "icasimpan"
-    #gitlab = "username2"
