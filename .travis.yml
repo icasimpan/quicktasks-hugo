@@ -25,6 +25,9 @@ after_success:
   - git commit -m "${MESSAGE}"
   - git checkout -b ${GH_PUBLISH_BRANCH}
   - git push "https://${GITHUB_TOKEN}@${GH_REPO}" ${GH_PUBLISH_BRANCH} -f
+  - echo "[debug] after clone of it-quicktasks"
+  - ls -l
+  - echo "[debug - end] after clone of it-quicktasks"
   - ls -l content/posts/
   ## Try and merge to it-quicktasks.com
   - git clone https://${GH_MERGE_REPO}
